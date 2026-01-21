@@ -4,31 +4,33 @@ import {
   RecordSource,
   Store,
   FetchFunction,
-} from 'relay-runtime'
+} from "relay-runtime";
 
-const HTTP_ENDPOINT = 'http://localhost:4000/graphql'
+// const HTTP_ENDPOINT = 'http://localhost:4000/graphql'
+const HTTP_ENDPOINT =
+  "https://organic-eureka-pj79qv76jv6c7pj5-4000.app.github.dev/graphql";
 
 const fetchFn: FetchFunction = async (request, variables) => {
   const resp = await fetch(HTTP_ENDPOINT, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
+      Accept: "application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       query: request.text,
       variables,
     }),
-  })
+  });
 
-  return await resp.json()
-}
+  return await resp.json();
+};
 
 function createRelayEnvironment() {
   return new Environment({
     network: Network.create(fetchFn),
     store: new Store(new RecordSource()),
-  })
+  });
 }
 
-export const RelayEnvironment = createRelayEnvironment()
+export const RelayEnvironment = createRelayEnvironment();
