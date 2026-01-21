@@ -2,9 +2,10 @@ import { createServer } from 'node:http'
 import { createYoga, createSchema } from 'graphql-yoga'
 
 // Simple in-memory data for demonstration
+const baseTime = new Date()
 const messages = [
-  { id: '1', text: 'Hello from CORS-enabled backend!', timestamp: new Date().toISOString() },
-  { id: '2', text: 'CORS allows cross-origin requests', timestamp: new Date().toISOString() },
+  { id: '1', text: 'Hello from CORS-enabled backend!', timestamp: new Date(baseTime.getTime() - 3600000).toISOString() },
+  { id: '2', text: 'CORS allows cross-origin requests', timestamp: baseTime.toISOString() },
 ]
 
 // GraphQL Schema
