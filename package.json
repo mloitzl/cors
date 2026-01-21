@@ -1,0 +1,19 @@
+{
+  "name": "cors-showcase",
+  "version": "1.0.0",
+  "description": "A showcase for understanding CORS (Cross-Origin Resource Sharing)",
+  "private": true,
+  "scripts": {
+    "backend": "pnpm --filter backend dev",
+    "frontend": "pnpm --filter frontend dev",
+    "dev": "pnpm --parallel --filter backend --filter frontend dev"
+  },
+  "keywords": [
+    "cors",
+    "graphql",
+    "react",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT"
+}
