@@ -34,6 +34,8 @@ pnpm-debug.log*
 
 # Relay
 __generated__/
+# Allow the manually created MessagesQuery for simplicity
+!frontend/src/__generated__/MessagesQuery.graphql.ts
 
 # Temp files
 *.tmp
