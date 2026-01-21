@@ -3,7 +3,7 @@ image: gitpod/workspace-full
 tasks:
   - name: Install dependencies
     init: |
-      npm install -g pnpm
+      corepack enable
       pnpm install
     command: |
       echo "Ready to run! Use 'pnpm dev' to start both frontend and backend"
