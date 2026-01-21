@@ -1,19 +1,9 @@
-import React from 'react'
-import { graphql, useLazyLoadQuery } from 'react-relay'
+import { useLazyLoadQuery } from 'react-relay'
+import MessagesQueryNode from './__generated__/MessagesQuery.graphql'
 import type { MessagesQuery as MessagesQueryType } from './__generated__/MessagesQuery.graphql'
 
-const MessagesQuery = graphql`
-  query MessagesQuery {
-    messages {
-      id
-      text
-      timestamp
-    }
-  }
-`
-
 export default function Messages() {
-  const data = useLazyLoadQuery<MessagesQueryType>(MessagesQuery, {})
+  const data = useLazyLoadQuery<MessagesQueryType>(MessagesQueryNode, {})
 
   return (
     <div style={{ marginTop: '20px' }}>

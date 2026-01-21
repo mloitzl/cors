@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react'
+import { Suspense, useState } from 'react'
 import { RelayEnvironmentProvider } from 'react-relay'
 import { RelayEnvironment } from './RelayEnvironment'
 import Messages from './Messages'
