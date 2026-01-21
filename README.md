@@ -299,14 +299,53 @@ To deepen your understanding:
 - [GraphQL Yoga CORS Documentation](https://the-guild.dev/graphql/yoga-server/docs/features/cors)
 - [CORS in Action - Video Tutorial](https://www.youtube.com/results?search_query=cors+tutorial)
 
-## 🐛 GitHub Codespaces
+## 🚀 GitHub Codespaces & Gitpod
 
-This project is configured for GitHub Codespaces. When you open it in Codespaces:
+### GitHub Codespaces
 
-1. Dependencies will be automatically installed
-2. Both frontend and backend will start automatically
-3. Ports will be forwarded so you can access the applications
-4. CORS is pre-configured for the Codespaces environment
+This project is fully configured for GitHub Codespaces:
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mloitzl/cors)
+
+**What happens when you open in Codespaces:**
+1. ✅ Node.js 20 environment is set up automatically
+2. ✅ pnpm is installed globally
+3. ✅ All dependencies are installed (`pnpm install`)
+4. ✅ Ports 4000 (backend) and 5173 (frontend) are forwarded
+5. ✅ VS Code extensions for GraphQL and TypeScript are installed
+
+**To start the application:**
+```bash
+# In the Codespaces terminal, run:
+pnpm dev
+```
+
+Both services will start, and the frontend will automatically open in your browser.
+
+### Gitpod
+
+Alternatively, you can use Gitpod:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mloitzl/cors)
+
+### Local Development
+
+If you prefer to run locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/mloitzl/cors.git
+cd cors
+
+# Install pnpm if you don't have it
+npm install -g pnpm
+
+# Install dependencies
+pnpm install
+
+# Start both frontend and backend
+pnpm dev
+```
 
 ## 📄 License
 

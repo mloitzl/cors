@@ -1,0 +1,26 @@
+image: gitpod/workspace-full
+
+tasks:
+  - name: Install dependencies
+    init: |
+      npm install -g pnpm
+      pnpm install
+    command: |
+      echo "Ready to run! Use 'pnpm dev' to start both frontend and backend"
+
+ports:
+  - port: 4000
+    onOpen: notify
+    name: Backend (GraphQL)
+    description: GraphQL Yoga backend server
+  - port: 5173
+    onOpen: open-browser
+    name: Frontend (React)
+    description: React frontend with Vite
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - GraphQL.vscode-graphql
+    - GraphQL.vscode-graphql-syntax
